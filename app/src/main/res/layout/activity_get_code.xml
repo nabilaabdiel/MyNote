@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.forgot.code.GetCodeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Verification Code"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/input_code_1"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_otp"
+                android:imeOptions="actionNext"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:text="2"
+                android:textSize="24sp"
+                android:fontFamily="@font/inter_bold"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                tools:ignore="Label for"/>
+
+            <EditText
+                android:id="@+id/input_code_2"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_otp"
+                android:imeOptions="actionNext"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:text="0"
+                android:textSize="24sp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                tools:ignore="Label for"/>
+
+            <EditText
+                android:id="@+id/input_code_3"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_otp"
+                android:imeOptions="actionNext"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:text="4"
+                android:textSize="24sp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                tools:ignore="Label for"/>
+
+            <EditText
+                android:id="@+id/input_code_4"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_otp"
+                android:imeOptions="actionDone"
+                android:gravity="center"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:text="3"
+                android:textSize="24sp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:maxLength="1"
+                android:textColor="@color/black"
+                tools:ignore="Label for"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/btn_login">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="@color/black"
+                android:text="If you didn’t receive a code, " />
+
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/inter_semi_bold"
+                android:text="Resend"
+                android:textColor="@color/button" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/btn_login"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="or"
+            android:textSize="12sp"
+            android:textColor="@color/button" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_google"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_apple"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Do you have an account?"
+            android:textSize="14sp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="38dp"
+            android:background="@drawable/btn_sign_up"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:textColor="@color/button" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

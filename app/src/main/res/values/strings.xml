@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyNote</string>
+    <string name="label_must_fill">Required</string>
+    <string name="send_to">Share to…</string>
+    <string name="search_category">Search category</string>
+
+</resources>

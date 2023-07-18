@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.abdiel.mynote.data.note.Note" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_semi_bold"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingHorizontal="25dp"
+                    android:text='@{data.title}'
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:text="Here you can" />
+
+                <ImageButton
+                    android:id="@+id/true_bookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/title"
+                    android:layout_alignEnd="@id/title"
+                    android:layout_alignBottom="@id/title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="24dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/fav_home"
+                    android:visibility='@{data.favorite ? View.VISIBLE : View.GONE}' />
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter_regular"
+                    android:maxLines="3"
+                    android:paddingHorizontal="25dp"
+                    android:text='@{data.body}'
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:text="In its most general sense, the term refers to the totality of entities, to the whole of reality or to everything that is.[1] The nature of the world has been conceptualized differently in different fields. Some conceptions see the world as unique while others talk of a." />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="18dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/inter_semi_bold"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:text='@{data.categories.size() > 0 ? data.categories.get(0).categoryName : ""}'
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="In its most general sense" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:maxLength="10"
+                        android:text='@{data.updatedAt}'
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="29/05/2023" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
